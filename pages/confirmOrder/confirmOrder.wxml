@@ -1,0 +1,90 @@
+<view class="container">
+  <text class="confirm">确认订单</text>
+  <view class="info">
+    <view class="left">合同编号：</view>
+    <view class="right" id="contract">
+      <!-- Y218-00043 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">车号：</view>
+    <view class="right" id="carNum">
+      <!-- 168 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">工程名称：</view>
+    <view class="right" id="projectName">
+      <!-- 恒大御景湾 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">施工单位：</view>
+    <view class="right" id="builder">
+      <!-- 中国建筑第五工程局有限公司 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">施工地点：</view>
+    <view class="right" id="address">
+      <!-- 新村 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">施工部位：</view>
+    <view class="right" id="constructionSite">
+      <!-- 15-34/A-U轴12层墙柱、构造柱 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">产品种类：</view>
+    <view class="right" id="type">
+      <!-- 砼 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">数量：</view>
+    <view class="right" id="need">
+      <!-- 6.00 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">强度等级：</view>
+    <view class="right" id="strength">
+      <!-- C30 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">抗冻等级：</view>
+    <view class="right" id="antifreeze">
+      <!-- F300 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">抗渗等级：</view>
+    <view class="right" id="impervious">
+      <!-- P8 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">坍落度：</view>
+    <view class="right" id="collapse">
+      <!-- 120 ± 20 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">浇筑方式：</view>
+    <view class="right" id="concreting">
+      <!-- 自卸 -->
+    </view>
+  </view>
+  <view class="info">
+    <view class="left">供砼时间：</view>
+    <view class="right" id="deliverTime">
+      <!-- 2018-08-10 -->
+    </view>
+  </view>
+  <view class="submit">
+    <button>确认收货</button>
+  </view>
+</view>

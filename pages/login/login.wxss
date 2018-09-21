@@ -1,0 +1,7 @@
+.section {
+  margin: 40rpx 60rpx;
+}
+
+.btn-area {
+  padding: 0 30px;
+}

@@ -1,0 +1,18 @@
+<view class="container">
+  <view wx:for='{{ordersToConfirm}}' data-carNum="{{item.carNum}}" wx:key="{{index}}" bindtap='confirmOrder'>
+    <view class='header'>
+      <text>{{item.carNum}} > </text>
+      <text>{{item.concreting}}</text>
+    </view>
+    <view class='content'>
+      <view class='content_up'>
+        <view class='up_left'>{{item.need}}</view>
+        <view class='up_right'>{{item.projectName}}</view>
+      </view>
+      <view class='content_down'>
+        <view class='down_left'>{{item.strength}}</view>
+        <view class='down_right'>{{item.constructionSite}}</view>
+      </view>
+    </view>
+  </view>
+</view>
