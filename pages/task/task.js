@@ -1,65 +1,74 @@
+var Charts = require('../../utils/wxcharts-min.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
+  onLoad: function(options) {
+    var finish = 0;
+    var need = 0;
+    var total = 0;
+
+    var that = this;
+    wx.request({
+      url: 'https://easy-mock.com/mock/5b970ac8458965131f4aef1b/tmhPro/tasks',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function(res) {
+        that.setData({
+          task: res.data.results
+        })
+
+        var arr = that.data.task;
+        for (var i = 0; i < arr.length; i++) {
+          finish += parseInt(arr[i].finish);
+          need += parseInt(arr[i].need)
+        }
+
+        that.setData({
+          total: finish + need
+        })
+
+        // 初始化饼图
+        new Charts({
+          canvasId: 'canvas',
+          type: 'pie',
+          series: [{
+            name: '已签收',
+            data: finish
+          }, {
+            name: '未签收',
+            data: need
+          }],
+          width: 375,
+          height: 280,
+          dataLabel: true,
+        });
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
+  // 跳转到任务日历界面
+  taskDate: function(e) {
+    wx.navigateTo({
+      url: '../taskDate/taskDate',
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
+  // 跳转到任务详情界面，参数时taskId
+  taskItem: function(e) {
+    var taskId = e.currentTarget.dataset.taskid;
+    wx.navigateTo({
+      url: '../taskInfo/taskInfo?taskId=' + e.currentTarget.dataset.taskid,
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
-  }
 })

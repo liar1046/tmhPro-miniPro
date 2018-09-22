@@ -6,11 +6,11 @@
   </view>
   <view class='content'>
     <view class='section'>
-        <input type='text' bindinput='bindProjectIdInput' placeholder='工程识别码' auto-focus></input>
+        <input type='text' bindinput='bindProjectCodeInput' placeholder='工程识别码' auto-focus></input>
     </view>
     <view class='section'>
       <view class='btn-area'>
-        <button type='primary' bindtap='onTap'>登录</button>
+        <button type='primary' bindtap='login'>登录</button>
       </view>
     </view>
   </view>

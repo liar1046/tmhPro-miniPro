@@ -4,6 +4,7 @@
 
 .confirm{
   font-size: 56rpx;
+  margin-bottom: 30px;
 }
 
 .info {
@@ -15,4 +16,8 @@
 
 .left{
   width: 200rpx;
+}
+
+.btn-area{
+  margin: 30px 0;
 }

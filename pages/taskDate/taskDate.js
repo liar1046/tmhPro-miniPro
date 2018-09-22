@@ -1,4 +1,4 @@
-// pages/taskInfo/taskInfo.js
+// pages/orderDate/orderDate.js
 Page({
 
   /**
@@ -13,19 +13,14 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-
-    that.setData({
-      taskId:options.taskId
-    })
-
     wx.request({
-      url: 'https://easy-mock.com/mock/5b970ac8458965131f4aef1b/tmhPro/taskItem?taskId='+this.data.taskId,
+      url: 'https://easy-mock.com/mock/5b970ac8458965131f4aef1b/tmhPro/taskDate',
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
         that.setData({
-          taskInfo: res.data.results
+          taskDate: res.data.results
         })
       }
     })

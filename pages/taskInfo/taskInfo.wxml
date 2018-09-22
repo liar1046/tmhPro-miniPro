@@ -1,2 +1,18 @@
-<!--pages/index/taskInfo/taskInfo.wxml-->
-<text>pages/index/taskInfo/taskInfo.wxml</text>
+<view class='container'>
+  <view class='head'>车号</view>
+  <view class='head'>货物类型</view>
+  <view class='head'>签收量</view>
+  <view class='head'>浇注方式</view>
+</view>
+<view class='content' wx:for='{{taskInfo}}' wx:key='{{index}}'>
+  <view class='content-up'>
+    <view class='orderId'>{{item.orderId}}</view>
+    <view class='date'>{{item.deliverTime}}</view>
+  </view>
+  <view class='content-down'>
+    <view class='item'>{{item.carNum}}</view>
+    <view class='item'>{{item.type}}</view>
+    <view class='item'>{{item.signedNum}}</view>
+    <view class='item'>{{item.concreting}}</view>
+  </view>
+</view>

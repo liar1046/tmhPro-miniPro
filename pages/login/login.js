@@ -1,20 +1,37 @@
 Page({
   data: {
-    projectId: ''
+
   },
 
-  bindProjectIdInput: function(e) {
+  bindProjectCodeInput: function(e) {
     this.setData({
-      projectId: e.detail.value
+      projectCode: e.detail.value
     })
   },
 
-  onTap: function(e) {
-    if (this.data.projectId == 'tom') {
-      console.log(this.data.projectId);
-      wx.switchTab({
-        url: '../task/task',
-      });
+  login: function(e) {
+    if (this.data.projectCode == 'tom') {
+      // console.log(this.data.projectCode);
+      wx.request({
+        url: 'http://localhost:8080/tmhPro/loginServlet?projectCode=' + this.data.projectCode,
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+          // console.log(res.data)
+          if(res.data == 0){
+            wx.showModal({
+              title: '登录失败',
+              content: '工程识别码错误，请重新输入',
+            })
+          }else{
+            // wx.switchTab 从非tab界面跳转到tab界面
+            wx.switchTab({
+              url: '../task/task',
+            })
+          }
+        }
+      })
     } else {
       wx.showModal({
         title: '登录失败',

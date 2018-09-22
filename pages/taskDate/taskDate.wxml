@@ -1,0 +1,42 @@
+<view class='header'>
+  <view class='item'>周一</view>
+  <view class='item'>周二</view>
+  <view class='item'>周三</view>
+  <view class='item'>周四</view>
+  <view class='item'>周五</view>
+  <view class='item'>周六</view>
+  <view class='item'>周日</view>
+</view>
+<view class='content' wx:for='{{taskDate}}' wx:key='{{index}}'>
+  <view>{{item.m}}</view>
+  <view class='week'>
+    <view class='value'>
+      <view class='date' wx:if='{{item.v1 != null}}'>{{item.w1}}</view>
+      <view class='data' wx:if='{{item.v1 != null}}'>{{item.v1}}</view>
+    </view>
+    <view class='value'>
+      <view class='date' wx:if='{{item.v2 != null}}'>{{item.w2}}</view>
+      <view class='data' wx:if='{{item.v2 != null}}'>{{item.v2}}</view>
+    </view>
+    <view class='value'>
+      <view class='date' wx:if='{{item.v3 != null}}'>{{item.w3}}</view>
+      <view class='data' wx:if='{{item.v3 != null}}'>{{item.v3}}</view>
+    </view>
+    <view class='value'>
+      <view class='date' wx:if='{{item.v4 != null}}'>{{item.w4}}</view>
+      <view class='data' wx:if='{{item.v4 != null}}'>{{item.v4}}</view>
+    </view>
+    <view class='value'>
+      <view class='date' wx:if='{{item.v5 != null}}'>{{item.w5}}</view>
+      <view class='data' wx:if='{{item.v5 != null}}'>{{item.v5}}</view>
+    </view>
+    <view class='value'>
+      <view class='date' wx:if='{{item.v6 != null}}'>{{item.w6}}</view>
+      <view class='data' wx:if='{{item.v6 != null}}'>{{item.v6}}</view>
+    </view>
+    <view class='value'>
+      <view class='date' wx:if='{{item.v7 != null}}'>{{item.w7}}</view>
+      <view class='data' wx:if='{{item.v7 != null}}'>{{item.v7}}</view>
+    </view>
+  </view>
+</view>

@@ -1,17 +1,18 @@
-<view class='container'>
+<canvas style="width: 750rpx; height: 280px;" canvas-id="canvas" bindtap='taskDate'>总量：{{total}}</canvas>
+<view class='container' wx:for='{{task}}' wx:key='{{index}}' data-taskId='{{item.taskId}}' bindtap='taskItem' >
   <view class='header'>
-    <text> Y218-02691 ></text>
-    <text> 05月08日11点 ></text>
-    <text> 自卸</text>
+    <text> {{item.taskId}} ></text>
+    <text> {{item.deliverTime}} ></text>
+    <text> {{item.concreting}}</text>
   </view>
   <view class='content'>
     <view class='content_up'>
-      <view class='up_left'>42.13</view>
-      <view class='up_right'>龙城优山美郡桩基工程</view>
+      <view class='up_left'>{{item.need}}</view>
+      <view class='up_right'>{{item.projectName}}</view>
     </view>
     <view class='content_down'>
-      <view class='down_left'>C35P8</view>
-      <view class='down_right'>灌装柱</view>
+      <view class='down_left'>{{item.strength}}</view>
+      <view class='down_right'>{{item.constructionSite}}</view>
     </view>
   </view>
   <hr style="width:90%;margin:0 auto;border: 0;height: 1px;background: #333;background-image: linear-gradient(to right, #ccc, #222, #ccc);" />

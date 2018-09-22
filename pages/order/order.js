@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // 给下拉框设置选项值
     type: ['砼', '砂浆'],
     typeIndex: 0,
     strength: ['C10', 'C15', 'C20', 'C25', 'C30', 'C35', 'C40', 'C45', 'C50', 'C55', 'C60'],
@@ -91,6 +92,7 @@ Page({
     var date = this.data.date;
     var phone = e.detail.value.phone;
     var entering = e.detail.value.entering
+    // 对输入框的值进行判断，如果为空，禁止提交
     if (constructionSite == null || need == null || date == null || phone == null) {
       wx.showModal({
         title: '提示',

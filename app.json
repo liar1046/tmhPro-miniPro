@@ -5,7 +5,9 @@
     "pages/order/order",
     "pages/usercenter/usercenter",
     "pages/ordersToConfirm/ordersToConfirm",
-    "pages/confirmOrder/confirmOrder"
+    "pages/confirmOrder/confirmOrder",
+    "pages/taskInfo/taskInfo",
+    "pages/taskDate/taskDate"
   ],
   "window": {
     "backgroundTextStyle": "light",

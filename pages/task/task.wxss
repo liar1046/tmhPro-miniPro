@@ -6,6 +6,7 @@
 }
 
 .content_up {
+  width:750rpx;
   height:80rpx;
   line-height: 80rpx;
   display: flex;

@@ -1,6 +1,6 @@
 Page({
   data: {
-    ordersToConfirm:''
+
   },
 
   onLoad:function(option){
@@ -20,8 +20,10 @@ Page({
 
   confirmOrder:function(e){
     var carNum = e.currentTarget.dataset.carnum;
-    this.setData(carNum);
-    console.log(carNum);
+    this.setData({
+      carNum: carNum
+    });
+    // console.log("传递的参数：" + carNum);
     wx.navigateTo({
       url: '../confirmOrder/confirmOrder?carNum=' + carNum,
     })

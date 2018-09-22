@@ -1,1 +1,49 @@
-/* pages/index/taskInfo/taskInfo.wxss */
+.container {
+  width: 100%;
+  height: 22px;
+  display: flex;
+  flex-direction: row;
+  background-color: #F0F0F0
+}
+
+.head {
+  width: 25%;
+  text-align: center
+}
+
+.content{
+  width:100%;
+  height:60px;
+}
+
+.content-up {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.orderId{
+  width: 70%;
+  text-align: center;
+  color: red;
+  margin-left: 20rpx
+}
+
+.date{
+  width:25%;
+  height:20rpx;
+  margin-left: 60rpx;
+  font-size:14px;
+  line-height: 36px
+}
+
+.content-down {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.item {
+  width: 185rpx;
+  text-align: center
+}

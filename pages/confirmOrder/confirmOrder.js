@@ -1,7 +1,7 @@
 Page({
 
   data: {
-    confirmOrder: ""
+
   },
 
   /**
@@ -9,7 +9,7 @@ Page({
    */
   onLoad: function(e) {
     var carNum = e.carNum;
-    console.log(carNum);
+    // console.log("接收的参数：" + carNum);
 
     var that = this;
     wx.request({
@@ -17,9 +17,10 @@ Page({
       header: {
         'content-type': 'application/json' // 默认值
       },
-      success: function(res) {
+      success: function (res) {
         that.setData({
-          confirmOrder: res.data.results
+          // 这里返回的结果只有一条
+          confirmOrder: res.data
         })
       }
     })
